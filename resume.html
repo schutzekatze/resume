@@ -1,723 +1,610 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Vladimir Nikolić</title>
-
-        <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-
-	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-        <style type="text/css">
-        @font-face {
-            font-family: 'Josefin Sans';
-            font-style: normal;
-            font-weight: 300;
-            src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Josefin Sans';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 300;
-            src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: italic;
-            font-weight: 300;
-            src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: italic;
-            font-weight: 400;
-            src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
-        }
-        @font-face {
-            font-family: 'Lato';
-            font-style: italic;
-            font-weight: 700;
-            src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-        }
-
-        body {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 400;
-            background: #444444;
-            letter-spacing: .3px;
-            font-size: 13px;
-        }
-
-        @page {
-            size: A4;
-            margin: 0;
-        }
-
-        @media print {
-            html, body {
-                width: 210mm;
-                height: 297mm;
-            }
-        }
-
-        .page {
-            background: white;
-            width: 210mm;
-            display: block;
-            margin: auto;
-
-            padding: 20px 28px 30px 28px;
-            box-shadow: 0 1px 10px rgba(0, 0, 0, 0); }
-            .page:after {
-                content: "";
-                display: table;
-                clear: both;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            text-transform: uppercase;
-            margin: 0;
-        }
-
-        h1 {
-            font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-            font-weight: 700;
-            font-size: 30px;
-            letter-spacing: 1px;
-        }
-
-        h2 {
-            font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 18px;
-            letter-spacing: .5px;
-        }
-
-        h3 {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 16px;
-            letter-spacing: .4px; }
-            h3.bold {
-                font-weight: 700;
-        }
-
-        h4 {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 14px; }
-            h4.bold {
-                font-weight: 700;
-        }
-
-        h5 {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            font-size: 13px; }
-            h5.italic {
-                font-style: italic;
-        }
-
-        h6 {
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            font-weight: 400;
-            font-size: 12px;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: inherit; }
-            a .fa-external-link {
-                font-size: 10px;
-                vertical-align: text-top;
-        }
-
-        a:link, a:visited, a:hover, a:active {
-            text-decoration: none;
-            color: black;
-            outline: 0;
-        }
-
-        em {
-            color: #777;
-        }
-
-        ul {
-            margin: 0 0 0;
-            -webkit-padding-start: 25px; }
-            ul li {
-                padding-left: 10px; }
-            ul.minimal {
-                list-style: none;
-                padding: 0; }
-            ul.minimal li {
-                padding-left: 0; }
-            ul.two-column {
-                -webkit-column-count: 2;
-                -webkit-column-gap: 28px;
-                -moz-column-count: 2;
-                 column-count: 2;
-                -moz-column-gap: 28px;
-                 column-gap: 28px; }
-            ul.two-column li {
-                 padding-left: 0;
-        }
-
-        .longline {
-            width: 90%;
-            margin: auto;
-            margin-top: 5px;
-            margin-bottom: 8px;
-            border-top: 1px solid rgba(0, 0, 0, 0.65);
-        }
-
-        .shortline {
-            width: 190px;
-            margin: auto;
-            margin-top: 3px;
-            margin-bottom: 4px;
-            border-top: 1px solid rgba(0, 0, 0, 0.45);
-        }
-
-        .section {
-            margin: auto;
-            margin-top: 0px;
-            margin-bottom: 18px; }
-            .section .title {
-                text-align: center; }
-            .section .content {
-                width: 640px;
-                margin-left: auto;
-                margin-right: auto; }
-                .section .content .info {
-                    text-align: left; }
-                .section .content .location-and-date {
-                    text-align: right;
-        }
-
-        p {
-            margin: 0 0 14px 0;
-            padding: 0 0 0 1.8em;
-        }
-
-        .about-row {
-            text-align: center;
-            margin-bottom: 5px; }
-            .about-row .fa {
-                font-size: 14px;
-                width: 12px;
-                margin-left: 5px;
-                margin-right: 5px;
-                text-align: center;
-                vertical-align: middle; }
-            .about-row .fa.fa-map-marker {
-                font-size: 16px; }
-            .about-row .fa.fa-mobile {
-                font-size: 18px; }
-            .about-row .fa.fa-envelope-o {
-                font-size: 12px; }
-            .about-row .fa.fa-desktop {
-                font-size: 11px; }
-            .about-row .fa.fa-external-link {
-                width: auto;
-                font-size: inherit;
-                vertical-align: text-top; }
-          .about-row .info-text {
-                display: inline-block;
-                vertical-align: middle;
-        }
-
-        .skill-row {
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .skill-group {
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 7px;
-        }
-
-        .interests {
-            text-align: center;
-        }
-
-        .last-updated-div {
-            position: relative;
-            width: 100%;
-        }
-
-        .last-updated {
-            position: absolute;
-            width: 100%;
-            text-align: right;
-            top: -14px;
-            right: -18px;
-        }
-        </style>
-	</head>
-	<body>
-		<main class="page container">
-
-            <div class="last-updated-div"><div class="last-updated">2020-04-02</div></div>
-
-			<header class="section">
-			    <h1 class="title">Vladimir Nikolić</h1>
-                <div class="about-row">
-                    <i class="fa fa-map-marker"></i>
-                    <div class="info-text">Vancouver, Canada</div>
-
-                    <i class="fa fa-envelope-o"></i>
-                    <div class="info-text"><a href="mailto:vladlich@protonmail.com">vladlich@protonmail.com</a></div>
-
-                    <i class="fa fa-github"></i>
-                    <div class="info-text"><a href="https://github.com/schutzekatze" target="_blank">github.com/schutzekatze</a></div>
-                </div>
-			</header>
-
-			<div class="section">
-				<h3 class="title">Skills</h3>
-				<div class="longline"></div>
-
-				<div class="skill-row">
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Bioinformatics</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-                            <li>Genome Assembly</li>
-                            <li>Variant Calling</li>
-							<li>Illumina, Linked Reads</li>
-						</ul>
-					</div>
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Systems &amp; Low Level</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-							<li>Linux, Bash</li>
-							<li>C, C++, Rust, x86, ARM</li>
-                            <li>Arduino, Raspberry Pi, STM32</li>
-                            <li>Computer Architecture</li>
-                            <li>Basic Electronics</li>
-						</ul>
-					</div>
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Data Science</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-							<li>Deep Learning, Tensorflow</li>
-							<li>Computer Vision, OpenCV</li>
-                            <li>Python</li>
-                            <li>SQL, PostgreSQL</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="skill-row">
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Collaboration</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-							<li>UML</li>
-							<li>Git</li>
-							<li>LaTeX</li>
-						</ul>
-					</div>
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Web & Mobile</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-                            <li>Python, Django, Flask</li>
-                            <li>Bootstrap, jQuery</li>
-                            <li>HTML, CSS, Javascript</li>
-                            <li>Java, Android</li>
-						</ul>
-					</div>
-
-					<div class="skill-group">
-						<div class="subtitle">
-							<h4>Languages</h4>
-							<div class="shortline"></div>
-						</div>
-						<ul class="minimal">
-							<li>Serbian <em>(Native speaker)</em></li>
-							<li>English <em>(Fluent, IELTS 8 / CEFR C1)</em></li>
-							<li>German <em>(Basic)</em></li>
-						</ul>
-                    </div>
-
-				</div>
-			</div>
-
-            <div class="section">
-                <h3 class="title">Education</h3>
-                <div class="longline"></div>
-
-                <div class="content">
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>University of British Columbia, Faculty of Science</b> (<a href="https://www.ubc.ca/" target="_blank"><u>ubc.ca</u></a>)<br/>
-                            <i>MSc in Bioinformatics</i><br/>
-                            <p>Expected graduation: Winter 2020</p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Vancouver, Canada<br/>
-                            Winter 2018 – present
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>University of Belgrade, School of Electrical Engineering</b> (<a href="https://www.etf.bg.ac.rs/en" target="_blank"><u>etf.bg.ac.rs</u></a>)<br/>
-                            <i>BSc in Software Engineering</i><br/>
-                            <p>
-                                CGPA: 9.54/10.00, Thesis:<br/>
-                                "Cloudiness Estimation using Convolutional Neural Networks".
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Belgrade, Serbia<br/>
-                            Autumn 2013 – Spring 2018
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="title">Publications &amp; Conference Proceedings</h3>
-                <div class="longline"></div>
-
-                <div class="content">
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>International Meteor Conference 2018 Proceedings</b> (<a href="https://www.imo.net/conference-imc/past-conferences/pezinok-modra-slovakia-30-august-2-september-2018/" target="_blank"><u>imo.net/...</u></a>)<br/>
-                            <i>"Automation of a meteor video network"</i><br/>
-                            <p><b>Nikolić, V</b>; Golubović, S;</p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Pezinok-Modra, Slovakia<br/>
-                            Summer 2018
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>International Meteor Conference 2017 Proceedings</b> (<a href="https://www.imo.net/conference-imc/past-conferences/petnica-serbia-21-24-september-2017/" target="_blank"><u>imo.net/...</u></a>)<br/>
-                            <i>"Cloudiness estimation for video meteor observations"</i><br/>
-                            <p><b>Nikolić, V</b>; Schröder, L; Tešić, A;</p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Petnica, Serbia<br/>
-                            Autumn 2017
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-			<div class="section">
-				<h3 class="title">Work &amp; Research Experience</h3>
-				<div class="longline"></div>
-
-                <div class="content">
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>Institute of Physics Belgrade Innovation Centre</b> (<a href="http://www.ic.ipb.ac.rs/" target="_blank"><u>ic.ipb.ac.rs</u></a>)<br/>
-                            <i>Internship, Teslagram Project</i><br/>
-                            (Computer Vision, OpenCV, C++, High Performance Computing)<br/>
-                            <p>
-                                Devised and implemented a custom visual pattern comparison algorithm
-                                and administrated the local Paradox supercomputer.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Belgrade, Serbia<br/>
-                            Spring 2018, Autumn 2018
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>PRACE Summer of HPC</b> (<a href="https://summerofhpc.prace-ri.eu/" target="_blank"><u>summerofhpc.prace-ri.eu</u></a>)<br/>
-                            <i>Internship, ABySS Assembler</i> (<a href="https://github.com/bcgsc/abyss"><u>github.com/...</u></a>)<br/>
-                            (C++, High Performance Computing, Bioinformatics)<br/>
-                            <p>
-                                Improved the performance of one of the genome assembling stages,
-                                Sealer, with the use of OpenMP and MPI.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Ostrava, Czech Republic<br/>
-                            Summer 2018
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>Open Source</b><br/>
-                            <i>Contributor, Meteorflux Project</i> (<a href="http://meteorflux.org/" target="_blank"><u>meteorflux.org</u></a>)<br/>
-                            (Python, Flask, Bootstrap, jQuery, AWS, Leadership)<br/>
-                            <p>
-                                An open source project by the International Meteor Organization for
-                                analysing meteor shower activity.
-                                I lead a team of volunteers from Petnica Meteor Group
-                                that fixes bugs and adds additional features.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Autumn 2017 - Summer 2018
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>Startup</b><br/>
-                            <i>Co-founder, Medici Project</i><br/>
-                            (Finance, Android, OpenCV, Machine Learning, Python, Django)<br/>
-                            <p>
-                                Attempted and failed a startup. The idea was to create a personalized
-                                assistant for every day financial tasks. Failed due to team's diverging
-                                future plans.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Belgrade, Serbia<br/>
-                            Autumn 2017 - Spring 2018
-                        </div>
-                    </div>
-
-                    <div style="page-break-after: always;"></div>
-                    <br/>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>Petnica Summer Institute Machine Learning 2017</b> (<a href="http://psiml.petnica.rs/" target="_blank"><u>psiml.petnica.rs</u></a>)<br/>
-                            <i>Participant, All Sky Cloudiness Estimator Project</i> (<a href="https://github.com/schutzekatze/allsky-cloudiness-estimator" target="_blank"><u>github.com/...</u></a>)<br/>
-                            (Python, Tensorflow, OpenCV)<br/>
-                            <p>
-                                A software package that outlines night sky clouds in All Sky images
-                                for the purposes of video meteor observations.<br/>
-                                Presented at International Meteor Conference 2017.<br/>
-                                Awarded 3rd place on IEEESTEC - 10th International Students Projects Conference.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Petnica, Serbia<br/>
-                            Autumn 2017 - Spring 2018
-                        </div>
-                    </div>
-
-                    <!--div class="row">
-                        <div class="col-8 info">
-                            <b>University of Belgrade, School of Electrical Engineering (<a href="https://www.etf.bg.ac.rs/en" target="_blank">etf.bg.ac.rs</a>)</b><br/>
-                            <i>Mewps Project</i><br/>
-                            (Python, C++, Raspberry Pi, Arduino)<br/>
-                            <p>
-                                A robot platform that utilizes Raspberry Pi and Arduino.
-                                Capable of tracing and moving towards sound sources.<br/>
-                                Originally a hobby project, later supervised by
-                                my microprocessor systems professor Saša Stojanović.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Belgrade, Serbia<br/>
-                            Autumn 2016 - Spring 2017
-                        </div>
-                    </div-->
-
-                </div>
-			</div>
-
-            <div class="section">
-                <h3 class="title">Other Activities</h3>
-                <div class="longline"></div>
-
-                <div class="content">
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>UBC Orbit</b> (<a href="https://www.ubcorbit.com/" target="_blank"><u>ubcorbit.com</u></a>)<br/>
-                            <i>Aspectu Project</i><br/>
-                            (C++, STM32, FreeRTOS)<br/>
-                            <p>
-                                Member of the UBC Orbit student club whose mission is to build
-                                and launch a cubesat capable of capturing images of Earth.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Vancouver, Canada<br/>
-                            Winter 2018 - Autumn 2019
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>Personal Project</b><br/>
-                            <i>Meteor Observation Notebook</i> (<a href="https://play.google.com/store/apps/details?id=rs.meteori.meteorobservationnotebook" target="_blank"><u>play.google.com/...</u></a>)<br/>
-                            (Android, Java)<br/>
-                            <p>
-                                An Android application that aids visual meteor observations.
-                                Adjusted not to distract at night time and to help later data analysis.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Autumn 2017
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>International Meteor Conference 2017</b> (<a href="https://www.imo.net/conference-imc/past-conferences/petnica-serbia-21-24-september-2017/" target="_blank"><u>imo.net/...</u></a>)<br/>
-                            <i>Member of the local organizing committee</i><br/>
-                            (Organization)<br/>
-                            <p>
-                                Helped organize the conference, introduce attendees
-                                and provide technical support.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Petnica, Serbia<br/>
-                            Autumn 2017
-                        </div>
-                    </div>
-
-                    <!--div class="row">
-                        <div class="col-8 info">
-                            <b>Petnica Meteor Astronomy Summer School</b><br/>
-                            <i>Participant, Cherry Aggregation Project</i><br/>
-                            (Meteor Astronomy, C++, Python)<br/>
-                            <p>
-                                Learned about meteor astronomy and visual meteor observation.
-                                Implemented a 3D physics simulation in C++ and its visualization in Python
-                                of ballistic aggregation.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Petnica, Serbia<br/>
-                            Summer 2017
-                        </div>
-                    </div-->
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>Personal Project</b><br/>
-                            <i>Arch Setup</i> (<a href="https://github.com/schutzekatze/arch-setup" target="_blank"><u>github.com/...</u></a>)<br/>
-                            (Linux, Bash)<br/>
-                            <p>
-                                A set of Bash scripts that automate the setup of various
-                                Arch Linux components to make it functional and user friendly.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Spring 2017
-                        </div>
-                    </div>
-
-                    <!--div class="row">
-                        <div class="col-8 info">
-                            <b>EDIT Summer School 2016 (<a href="https://www.edit.world/" target="_blank">edit.world</a>)</b><br/>
-                            <i>Participant</i><br/>
-                            (Android, OpenCV)<br/>
-                            <p>
-                                Made an augmented reality Android app that is
-                                capable of rendering 3D models of preset textbook
-                                pictures as they apprear on the camera.
-                                Awarded as the best participant.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Belgrade, Serbia<br/>
-                            Summer 2016
-                        </div>
-                    </div-->
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>University of Belgrade, School of Electrical Engineering</b> (<a href="https://www.etf.bg.ac.rs/en" target="_blank"><u>etf.bg.ac.rs</u></a>)<br/>
-                            <i>Student Mentor</i><br/>
-                            (Soft Skills)<br/>
-                            <p>
-                                Introducing and helping out freshmen with
-                                university&#x27;s organization and classes.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Belgrade, Serbia<br/>
-                            Autumn 2015 - Autumn 2016
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8 info">
-                            <b>University of Belgrade, School of Electrical Engineering</b> (<a href="https://www.etf.bg.ac.rs/en" target="_blank"><u>etf.bg.ac.rs</u></a>)<br/>
-                            <i>Student Demonstrator</i><br/>
-                            <p>
-                                Overseeing laboratory practices
-                                and grading students&#x27; assignments.
-                            </p>
-                        </div>
-                        <div class="col-4 location-and-date">
-                            Belgrade, Serbia<br/>
-                            Autumn 2014 - Autumn 2017
-                        </div>
-                    </div>
-
-                    <div align="center"><font size=5><b>...</b></font></div>
-
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="title">Interests &amp; Hobbies</h3>
-                <div class="longline"></div>
-
-                <div class="content interests">
-                    Nature and Urban Exploring • Freeclimbing • Parkour •
-                    Snowboarding • Soft Martial Arts • Meteor Observation
-                </div>
-            </div>
-
-		</main>
-	</body>
+  <head>
+    <title>Vladimir Nikolić</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+    <style type="text/css">
+    @font-face {
+      font-family: 'Josefin Sans';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Josefin Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 300;
+      src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 300;
+      src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+    }
+
+    body {
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: .3px;
+      font-size: 16px;
+      background: white;
+      display: block;
+      margin: auto;
+      padding: 20px 28px 30px 28px;
+      text-align: center;
+    }
+
+    a:link, a:visited, a:hover, a:active {
+      text-decoration: none;
+      color: inherit;
+      outline: 0;
+    }
+
+    p {
+      margin: 0 0 14px 0;
+      padding: 0 0 0 1.8em;
+    }
+
+    em {
+      color: #777;
+    }
+
+    ul {
+      margin: 0 0 0;
+      -webkit-padding-start: 25px; }
+      ul li {
+        padding-left: 10px; }
+      ul.minimal {
+        list-style: none;
+        padding: 0; }
+      ul.minimal li {
+        padding-left: 0; }
+      ul.two-column {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 28px;
+        -moz-column-count: 2;
+          column-count: 2;
+        -moz-column-gap: 28px;
+          column-gap: 28px; }
+      ul.two-column li {
+          padding-left: 0;
+    }
+
+    .last-updated-div {
+      position: relative;
+      width: 100%;
+    }
+
+    .last-updated {
+      position: absolute;
+      width: 100%;
+      text-align: right;
+      top: -14px;
+      right: -4px;
+    }
+
+    .longline {
+      width: 90%;
+      margin: auto;
+      margin-top: 5px;
+      margin-bottom: 8px;
+      border-top: 1px solid rgba(0, 0, 0, 0.65);
+    }
+
+    .shortline {
+      width: 190px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3px;
+      margin-bottom: 4px;
+      border-top: 1px solid rgba(0, 0, 0, 0.45);
+    }
+
+    .about-row {
+      margin-bottom: 5px; }
+      .about-row .fa {
+        font-size: 14px;
+        width: 12px;
+        margin-left: 5px;
+        margin-right: 5px;
+        vertical-align: middle; }
+      .about-row .fa.fa-map-marker {
+        font-size: 16px; }
+      .about-row .fa.fa-mobile {
+        font-size: 18px; }
+      .about-row .fa.fa-envelope-o {
+        font-size: 12px; }
+      .about-row .fa.fa-desktop {
+        font-size: 11px; }
+      .about-row .fa.fa-external-link {
+        width: auto;
+        font-size: inherit;
+        vertical-align: text-top; }
+    .about-row .info-text {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .skill-row {
+      margin-bottom: 15px;
+    }
+
+    .skill-group {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .section {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0px;
+      margin-bottom: 18px; }
+      .section .main-title {
+        font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 34px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 0; }
+      .section .title {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 22px;
+        letter-spacing: .4px;
+        text-transform: uppercase;
+        margin: 0; }
+      .section .subtitle {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 0; }
+      .section .content {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto; }
+        .section .content .info {
+          text-align: left; }
+        .section .content .location-and-date {
+          text-align: right; }
+        .section .content a:link, a:visited, a:hover, a:active {
+          text-decoration: underline;
+          color: inherit;
+          outline: 0;
+    }
+    </style>
+  </head>
+  <body class="container">
+    <div class="last-updated-div"><div class="last-updated"><script>document.write(moment().format("YYYY-MM-DD"));</script></div></div>
+
+    <header class="section">
+      <div class="main-title">Vladimir Nikolić</div>
+      <div class="about-row">
+        <i class="fa fa-map-marker"></i>
+        <div class="info-text">Vancouver, Canada</div>
+
+        <i class="fa fa-envelope-o"></i>
+        <div class="info-text"><a href="mailto:vladlich@protonmail.com">vladlich@protonmail.com</a></div>
+
+        <i class="fa fa-github"></i>
+        <div class="info-text"><a href="https://github.com/schutzekatze" target="_blank">github.com/schutzekatze</a></div>
+      </div>
+    </header>
+
+    <div class="section">
+      <div class="title">Skills</div>
+      <div class="longline"></div>
+      <div class="skill-row">
+
+        <div class="skill-group">
+          <div class="subtitle">Bioinformatics</div>
+          <div class="shortline"></div>
+          <ul class="minimal">
+            <li>Genome Assembly</li>
+            <li>Variant Calling</li>
+            <li>Illumina, Linked Reads</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="subtitle">Systems &amp; Low Level</div>
+          <div class="shortline"></div>
+          <ul class="minimal">
+            <li>Linux, Bash</li>
+            <li>Arduino, Raspberry Pi, STM32</li>
+            <li>Computer Architecture</li>
+            <li>Basic Electronics</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="subtitle">Data Science</div>
+          <div class="shortline"></div>
+          <ul class="minimal">
+            <li>Deep Learning, Tensorflow</li>
+            <li>Computer Vision, OpenCV</li>
+            <li>Python</li>
+            <li>SQL, PostgreSQL</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="skill-row">
+
+        <div class="skill-group">
+          <div class="subtitle">High Performance</div>
+          <div class="shortline"></div>
+          <ul class="minimal">
+            <li>C, C++, Rust</li>
+            <li>SLURM</li>
+            <li>Big Data</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="subtitle">Web & Mobile</div>
+          <div class="shortline"></div>
+          <ul class="minimal">
+            <li>Python, Django, Flask</li>
+            <li>Bootstrap, jQuery</li>
+            <li>HTML, CSS, Javascript</li>
+            <li>Java, Android</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="subtitle">Languages</div>
+          <div class="shortline"></div>
+          <ul class="minimal">
+            <li>Serbian <em>(Native speaker)</em></li>
+            <li>English <em>(Fluent, IELTS 8 / CEFR C1)</em></li>
+            <li>German <em>(Basic)</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="title">Education</div>
+      <div class="longline"></div>
+      <div class="content">
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>University of British Columbia, Faculty of Science</b> (<a href="https://www.ubc.ca/" target="_blank">ubc.ca</a>)<br/>
+            <i>MSc in Bioinformatics</i><br/>
+            <p>Expected graduation: Winter 2020</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Vancouver, Canada<br/>
+            Winter 2018 – present
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>University of Belgrade, School of Electrical Engineering</b> (<a href="https://www.etf.bg.ac.rs/en" target="_blank">etf.bg.ac.rs</a>)<br/>
+            <i>BSc in Software Engineering</i><br/>
+            <p>
+              CGPA: 9.54/10.00, Thesis:<br/>
+              "Cloudiness Estimation using Convolutional Neural Networks".
+            </p>
+          </div>
+          <div class="col-4 location-and-date">
+            Belgrade, Serbia<br/>
+            Autumn 2013 – Spring 2018
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="title">Publications &amp; Conference Proceedings</div>
+      <div class="longline"></div>
+
+      <div class="content">
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>International Meteor Conference 2018 Proceedings</b> (<a href="https://www.imo.net/conference-imc/past-conferences/pezinok-modra-slovakia-30-august-2-september-2018/" target="_blank">imo.net/...</a>)<br/>
+            <i>"Automation of a meteor video network"</i><br/>
+            <p><b>Nikolić, V</b>; Golubović, S;</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Pezinok-Modra, Slovakia<br/>
+            Summer 2018
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>International Meteor Conference 2017 Proceedings</b> (<a href="https://www.imo.net/conference-imc/past-conferences/petnica-serbia-21-24-september-2017/" target="_blank">imo.net/...</a>)<br/>
+            <i>"Cloudiness estimation for video meteor observations"</i><br/>
+            <p><b>Nikolić, V</b>; Schröder, L; Tešić, A;</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Petnica, Serbia<br/>
+            Autumn 2017
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="title">Work &amp; Research Experience</div>
+      <div class="longline"></div>
+      <div class="content">
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>Institute of Physics Belgrade Innovation Centre</b> (<a href="http://www.ic.ipb.ac.rs/" target="_blank">ic.ipb.ac.rs</a>)<br/>
+            <i>Internship, Teslagram Project</i><br/>
+            (Computer Vision, OpenCV, C++, High Performance Computing)<br/>
+            <p>Devised and implemented a custom visual pattern comparison algorithm.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Belgrade, Serbia<br/>
+            Spring 2018, Autumn 2018
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>PRACE Summer of HPC</b> (<a href="https://summerofhpc.prace-ri.eu/" target="_blank">summerofhpc.prace-ri.eu</a>)<br/>
+            <i>Internship, ABySS Assembler</i> (<a href="https://github.com/bcgsc/abyss">github.com/...</a>)<br/>
+            (C++, High Performance Computing, Bioinformatics)<br/>
+            <p>Improved the performance of one of the genome assembling stages, Sealer, with the use of OpenMP and MPI.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Ostrava, Czech Republic<br/>
+            Summer 2018
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>Open Source</b><br/>
+            <i>Contributor, Meteorflux Project</i> (<a href="http://meteorflux.org/" target="_blank">meteorflux.org</a>)<br/>
+            (Python, Flask, Bootstrap, jQuery, AWS, Leadership)<br/>
+            <p>An open source project by the International Meteor Organization for analysing meteor shower activity. I lead a team of volunteers from Petnica Meteor Group that fixes bugs and adds additional features.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Autumn 2017 - Summer 2018
+          </div>
+        </div>
+
+        <br/>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>Startup</b><br/>
+            <i>Co-founder, Medici Project</i><br/>
+            (Finance, Android, OpenCV, Machine Learning, Python, Django)<br/>
+            <p>Attempted and failed a startup. The idea was to create a personalized assistant for every day financial tasks. Failed due to team's diverging future plans.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Belgrade, Serbia<br/>
+            Autumn 2017 - Spring 2018
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>Petnica Summer Institute Machine Learning 2017</b> (<a href="http://psiml.petnica.rs/" target="_blank">psiml.petnica.rs</a>)<br/>
+            <i>Participant, All Sky Cloudiness Estimator Project</i> (<a href="https://github.com/schutzekatze/allsky-cloudiness-estimator" target="_blank">github.com/...</a>)<br/>
+            (Python, Tensorflow, OpenCV)<br/>
+            <p>A software package that outlines night sky clouds in All Sky images for the purposes of video meteor observations.<br/>
+              Presented at International Meteor Conference 2017.<br/>
+              Awarded 3rd place on IEEESTEC - 10th International Students Projects Conference.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Petnica, Serbia<br/>
+            Autumn 2017 - Spring 2018
+          </div>
+        </div>
+
+        <!--div class="row">
+          <div class="col-8 info">
+            <b>University of Belgrade, School of Electrical Engineering (<a href="https://www.etf.bg.ac.rs/en" target="_blank">etf.bg.ac.rs</a>)</b><br/>
+            <i>Mewps Project</i><br/>
+            (Python, C++, Raspberry Pi, Arduino)<br/>
+            <p>
+                A robot platform that utilizes Raspberry Pi and Arduino.
+                Capable of tracing and moving towards sound sources.<br/>
+                Originally a hobby project, later supervised by
+                my microprocessor systems professor Saša Stojanović.
+            </p>
+          </div>
+          <div class="col-4 location-and-date">
+            Belgrade, Serbia<br/>
+            Autumn 2016 - Spring 2017
+          </div>
+        </div-->
+
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="title">Other Activities</div>
+      <div class="longline"></div>
+      <div class="content">
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>Personal Project</b><br/>
+            <i>Arch Setup</i> (<a href="https://github.com/schutzekatze/arch-setup" target="_blank">github.com/...</a>)<br/>
+            (Linux, Bash)<br/>
+            <p>A set of Bash scripts that automate the setup of various Arch Linux components to make it functional and user friendly.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Spring 2017 – present
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>Personal Project</b><br/>
+            <i>Meteor Observation Notebook</i> (<a href="https://play.google.com/store/apps/details?id=rs.meteori.meteorobservationnotebook" target="_blank">play.google.com/...</a>)<br/>
+            (Android, Java)<br/>
+            <p>An Android application that aids visual meteor observations. Adjusted not to distract at night time and to help later data analysis.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Autumn 2017 – present
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>UBC Orbit</b> (<a href="https://www.ubcorbit.com/" target="_blank">ubcorbit.com</a>)<br/>
+            <i>Aspectu Project</i><br/>
+            (C++, STM32, FreeRTOS)<br/>
+            <p>Member of the UBC Orbit student club whose mission is to build and launch a cubesat capable of capturing images of Earth.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Vancouver, Canada<br/>
+            Winter 2018 - Autumn 2019
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>International Meteor Conference 2017</b> (<a href="https://www.imo.net/conference-imc/past-conferences/petnica-serbia-21-24-september-2017/" target="_blank">imo.net/...</a>)<br/>
+            <i>Member of the local organizing committee</i><br/>
+            (Organization)<br/>
+            <p>Helped organize the conference, introduce attendees, and provide technical support.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Petnica, Serbia<br/>
+            Autumn 2017
+          </div>
+        </div>
+
+        <!--div class="row">
+          <div class="col-8 info">
+            <b>Petnica Meteor Astronomy Summer School</b><br/>
+            <i>Participant, Cherry Aggregation Project</i><br/>
+            (Meteor Astronomy, C++, Python)<br/>
+            <p>
+                Learned about meteor astronomy and visual meteor observation.
+                Implemented a 3D physics simulation in C++ and its visualization in Python
+                of ballistic aggregation.
+            </p>
+          </div>
+          <div class="col-4 location-and-date">
+            Petnica, Serbia<br/>
+            Summer 2017
+          </div>
+        </div-->
+
+        <!--div class="row">
+          <div class="col-8 info">
+            <b>EDIT Summer School 2016 (<a href="https://www.edit.world/" target="_blank">edit.world</a>)</b><br/>
+            <i>Participant</i><br/>
+            (Android, OpenCV)<br/>
+            <p>
+                Made an augmented reality Android app that is
+                capable of rendering 3D models of preset textbook
+                pictures as they apprear on the camera.
+                Awarded as the best participant.
+            </p>
+          </div>
+          <div class="col-4 location-and-date">
+            Belgrade, Serbia<br/>
+            Summer 2016
+          </div>
+        </div-->
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>University of Belgrade, School of Electrical Engineering</b> (<a href="https://www.etf.bg.ac.rs/en" target="_blank">etf.bg.ac.rs</a>)<br/>
+            <i>Student Demonstrator</i><br/>
+            <p>Overseeing laboratory practices and grading students&#x27; assignments.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Belgrade, Serbia<br/>
+            Autumn 2014 - Autumn 2017
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 info">
+            <b>University of Belgrade, School of Electrical Engineering</b> (<a href="https://www.etf.bg.ac.rs/en" target="_blank">etf.bg.ac.rs</a>)<br/>
+            <i>Student Mentor</i><br/>
+            (Soft Skills)<br/>
+            <p>Introducing and helping out freshmen with university&#x27;s organization and classes.</p>
+          </div>
+          <div class="col-4 location-and-date">
+            Belgrade, Serbia<br/>
+            Autumn 2015 - Autumn 2016
+          </div>
+        </div>
+
+        <div><font size=5><b>...</b></font></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="title">Interests &amp; Hobbies</div>
+      <div class="longline"></div>
+      <div class="content">Nature &amp; Urban Exploring • Rock climbing • Parkour • Snowboarding • Soft Martial Arts • Meteor Observation</div>
+    </div>
+  </body>
 </html>
