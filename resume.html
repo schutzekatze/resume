@@ -79,7 +79,7 @@
       font-family: "Lato", Helvetica, Arial, sans-serif;
       font-weight: 400;
       letter-spacing: .3px;
-      font-size: 16px;
+      font-size: 15px;
       background: white;
       display: block;
       margin: auto;
@@ -187,6 +187,7 @@
       vertical-align: top;
       margin-left: 20px;
       margin-right: 20px;
+      width: 200px;
     }
 
     .section {
@@ -197,21 +198,21 @@
       .section .main-title {
         font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
         font-weight: 700;
-        font-size: 34px;
+        font-size: 33px;
         letter-spacing: 1px;
         text-transform: uppercase;
         margin: 0; }
       .section .title {
         font-family: "Lato", Helvetica, Arial, sans-serif;
         font-weight: 300;
-        font-size: 22px;
+        font-size: 21px;
         letter-spacing: .4px;
         text-transform: uppercase;
         margin: 0; }
       .section .subtitle {
         font-family: "Lato", Helvetica, Arial, sans-serif;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 17px;
         text-transform: uppercase;
         margin: 0; }
       .section .content {
@@ -226,6 +227,13 @@
           text-decoration: underline;
           color: inherit;
           outline: 0;
+    }
+
+    .asterisk {
+      text-align: left;
+      font-size: 13px;
+      position: relative;
+      top: 22px;
     }
     </style>
   </head>
@@ -255,7 +263,7 @@
           <div class="subtitle">Bioinformatics</div>
           <div class="shortline"></div>
           <ul class="minimal">
-            <li>Genome Assembly</li>
+            <li>Genome Assembly<sup>★</sup></li>
             <li>Variant Calling</li>
             <li>Illumina, Linked Reads</li>
           </ul>
@@ -265,7 +273,7 @@
           <div class="subtitle">Systems &amp; Low Level</div>
           <div class="shortline"></div>
           <ul class="minimal">
-            <li>Linux, Bash</li>
+            <li>Linux<sup>★</sup>, Bash<sup>★</sup></li>
             <li>Arduino, Raspberry Pi, STM32</li>
             <li>Computer Architecture</li>
             <li>Basic Electronics</li>
@@ -278,7 +286,7 @@
           <ul class="minimal">
             <li>Deep Learning, Tensorflow</li>
             <li>Computer Vision, OpenCV</li>
-            <li>Python</li>
+            <li>Python<sup>★</sup></li>
             <li>SQL, PostgreSQL</li>
           </ul>
         </div>
@@ -291,19 +299,20 @@
           <div class="subtitle">High Performance</div>
           <div class="shortline"></div>
           <ul class="minimal">
-            <li>C, C++, Rust</li>
+            <li>C<sup>★</sup>, C++<sup>★</sup>, Rust</li>
             <li>SLURM</li>
             <li>Big Data</li>
           </ul>
+          <div class="asterisk"><sup>★</sup> Proficient</div>
         </div>
 
         <div class="skill-group">
           <div class="subtitle">Web & Mobile</div>
           <div class="shortline"></div>
           <ul class="minimal">
-            <li>Python, Django, Flask</li>
+            <li>Django, Flask</li>
+            <li>HTML, CSS, JavaScript</li>
             <li>Bootstrap, jQuery</li>
-            <li>HTML, CSS, Javascript</li>
             <li>Java, Android</li>
           </ul>
         </div>
@@ -313,7 +322,7 @@
           <div class="shortline"></div>
           <ul class="minimal">
             <li>Serbian <em>(Native speaker)</em></li>
-            <li>English <em>(Fluent, IELTS 8 / CEFR C1)</em></li>
+            <li>English <em>(Fluent,<br/>IELTS 8 / CEFR C1)</em></li>
             <li>German <em>(Basic)</em></li>
           </ul>
         </div>
@@ -431,6 +440,8 @@
           </div>
         </div>
 
+        <style type="text/css">@media print { .pagebreak { page-break-before: always; } }</style>
+        <div class="pagebreak"></div>
         <br/>
 
         <div class="row">
